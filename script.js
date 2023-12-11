@@ -56,3 +56,18 @@ let tweets = [];
        displayTweet();
     }
   }
+
+  function bookmarked(){
+    localStorage.setItem('bookmarked', 'true');
+    const bookmark = document.getElementById('bookmarked');
+    const unbookmark = document.getElementById('unbookmarked');
+    bookmark.style.display ='none';
+    unbookmark.style.display ='block';
+  }
+  function unbookmark(){
+    localStorage.removeItem('bookmarked');
+    const unbookmark = document.getElementById('unbookmarked');
+    const bookmark = document.getElementById('bookmarked');
+    bookmark.style.display ='block';
+    unbookmark.style.display ='none';
+  }
